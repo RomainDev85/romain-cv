@@ -1,0 +1,155 @@
+main {
+    min-height: calc(100vh - 150px);
+    width: 100vw;
+    background: #EFF3FE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+.contact img {
+    margin: 50px;
+    width: 30%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 50px;
+    margin: 50px;
+    width: 30%;
+}
+form h2 {
+    margin: 10px 0;
+    color: #5769A4
+}
+form input {
+    margin: 10px 0;
+    padding: 5px 10px;
+    border: 1px solid #5769A4;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background: #EFF3FE;
+    color: #5769A4;
+}
+form input::-webkit-input-placeholder {
+    color: #5769A4;
+}
+form input::-moz-placeholder {
+    color: #5769A4;
+}
+form input:-ms-input-placeholder {
+    color: #5769A4;
+}
+form input::-ms-input-placeholder {
+    color: #5769A4;
+}
+form input::placeholder {
+    color: #5769A4;
+}
+form input:focus {
+    border: 2px solid #5769A4;
+    outline: none;
+}
+form textarea {
+    margin: 10px 0;
+    background: #EFF3FE;
+    color: #5769A4;
+    border: 1px solid #5769A4;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 5px 10px;
+    height: 10rem;
+}
+form textarea:focus {
+    border: 2px solid #5769A4;
+}
+form textarea::-webkit-input-placeholder {
+    color: #5769A4;
+}
+form textarea::-moz-placeholder {
+    color: #5769A4;
+}
+form textarea:-ms-input-placeholder {
+    color: #5769A4;
+}
+form textarea::-ms-input-placeholder {
+    color: #5769A4;
+}
+form textarea::placeholder {
+    color: #5769A4;
+}
+form .error {
+    color: #dc3545;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+form button {
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
+    max-width: min-content;
+    margin-top: 10px;
+    padding: 8px 20px;
+    font-size: 16px;
+    color: #EFF3FE;
+    background: #5769A4;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Roboto condensed', sans-serif;
+    font-weight: bold;
+}
+
+@media (max-width: 1500px) {
+    main {
+        min-height: calc(100vh - 100px);
+    }
+    .contact img {
+        margin: 50px;
+        width: 40%;
+    }
+}
+@media (max-width: 1250px) {
+    .contact img {
+        width: 50%;
+        margin: 25px;
+    }
+    form {
+        width: 50%;
+        padding: 25px;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    main {
+        min-height: calc(100vh - 80px);
+        width: 100vw !important;
+
+    }
+    main .contact {
+        width: 90%;
+        height: 90%;
+        position: relative;
+    }
+    form {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding-bottom: 90px;
+
+    }
+    img {
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        max-width: 150px;
+    }
+}

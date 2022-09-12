@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Romain Aubry - Contactez moi{% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="styles/contact.css">{% endblock %}
+
+{% block body %}
+
+<main>
+    <div class="contact">
+
+        {{ form_start(form) }}
+            <h2>Contactez moi</h2>
+
+            {{ form_widget(form.email) }}
+            {% for errorItem in form.email.vars.errors %}
+                <small class="error">{{ errorItem.message }}</small>
+            {% endfor %}
+
+            {{ form_widget(form.title) }}
+            {% for errorItem in form.title.vars.errors %}
+                <small class="error">{{ errorItem.message }}</small>
+            {% endfor %}
+
+            {{ form_widget(form.content) }}
+            {% for errorItem in form.content.vars.errors %}
+                <small class="error">{{ errorItem.message }}</small>
+            {% endfor %}
+        {{ form_end(form) }}
+
+        {# <form action="">
+            <h2>Contactez moi</h2>
+            <input type="email" name="email" placeholder="Votre email">
+            <input type="text" name="title" placeholder="Votre titre">
+            <textarea name="content" placeholder="Le contenu de votre message"></textarea>
+            <button type="submit">Envoyer</button>
+        </form> #}
+        <img src="images/contact.png" alt="">
+    </div>
+</main>
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script src="javascript/contact.js"></script>
+
+{% endblock %}

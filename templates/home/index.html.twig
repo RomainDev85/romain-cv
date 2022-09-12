@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Romain Aubry - Developpeur web{% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="styles/home.css">{% endblock %}
+
+
+
+{% block body %}
+
+<main>
+
+    <header>
+        <div class="content">
+            <h1>Je m'appelle Romain Aubry.</h1>
+            <div class="text">
+                <h2 id="dynamic-text">Je suis passionné d'informatique.</h2>
+                <span id="blink">|</span>
+            </div>
+            <div class="action">
+                <a href="/#about">À propos de moi</a>
+                <a href="/contact">Contactez moi</a>
+            </div>
+        </div>
+        <img src="images/romain-site-web.png" alt="">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" id="wavedown" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 140" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(255, 255, 255, 1)" offset="0%"/><stop stop-color="rgba(255, 255, 255, 1)" offset="100%"/></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,14L24,30.3C48,47,96,79,144,95.7C192,112,240,112,288,102.7C336,93,384,75,432,67.7C480,61,528,65,576,67.7C624,70,672,70,720,79.3C768,89,816,107,864,116.7C912,126,960,126,1008,112C1056,98,1104,70,1152,67.7C1200,65,1248,89,1296,93.3C1344,98,1392,84,1440,81.7C1488,79,1536,89,1584,84C1632,79,1680,61,1728,56C1776,51,1824,61,1872,63C1920,65,1968,61,2016,65.3C2064,70,2112,84,2160,84C2208,84,2256,70,2304,53.7C2352,37,2400,19,2448,28C2496,37,2544,75,2592,81.7C2640,89,2688,65,2736,51.3C2784,37,2832,33,2880,37.3C2928,42,2976,56,3024,65.3C3072,75,3120,79,3168,72.3C3216,65,3264,47,3312,46.7C3360,47,3408,65,3432,74.7L3456,84L3456,140L3432,140C3408,140,3360,140,3312,140C3264,140,3216,140,3168,140C3120,140,3072,140,3024,140C2976,140,2928,140,2880,140C2832,140,2784,140,2736,140C2688,140,2640,140,2592,140C2544,140,2496,140,2448,140C2400,140,2352,140,2304,140C2256,140,2208,140,2160,140C2112,140,2064,140,2016,140C1968,140,1920,140,1872,140C1824,140,1776,140,1728,140C1680,140,1632,140,1584,140C1536,140,1488,140,1440,140C1392,140,1344,140,1296,140C1248,140,1200,140,1152,140C1104,140,1056,140,1008,140C960,140,912,140,864,140C816,140,768,140,720,140C672,140,624,140,576,140C528,140,480,140,432,140C384,140,336,140,288,140C240,140,192,140,144,140C96,140,48,140,24,140L0,140Z"/></svg>
+    </header>
+
+    <section class="about" id="about">
+        <h2>Informations personnelles</h2>
+        <h3>En savoir plus à propos de moi.</h3>
+        <div class="content">
+            <div class="description">
+                <h4>Bonjour!</h4>
+                <p>
+                    <span>Je m’appelle Romain Aubry et je suis passionné par l’informatique de manière général et plus particulièrement du développement web et mobile.</span><br>
+                    <span>J’adore apprendre et utilisé différentes technologies du web pour crée des applications étonnantes, résoudre des problèmes lier aux différentes attentes clientes et produire des services métiers de qualités en utilisant la puissance des technologies d’hier, d’aujourd’hui et de demain.</span>   
+                </p>
+                <a href="/download-cv">Télécharger mon CV</a>
+            </div>
+            <div class="skills">
+                <h4>Compétences</h4>
+                <ul class="content">
+                    {% for key, value in skills %}
+                        <li>{{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" id="wavedown" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(239, 243, 254, 1)" offset="0%"/><stop stop-color="rgba(239, 243, 254, 1)" offset="100%"/></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,20L26.7,21.7C53.3,23,107,27,160,26.7C213.3,27,267,23,320,31.7C373.3,40,427,60,480,65C533.3,70,587,60,640,58.3C693.3,57,747,63,800,70C853.3,77,907,83,960,75C1013.3,67,1067,43,1120,28.3C1173.3,13,1227,7,1280,13.3C1333.3,20,1387,40,1440,45C1493.3,50,1547,40,1600,40C1653.3,40,1707,50,1760,46.7C1813.3,43,1867,27,1920,23.3C1973.3,20,2027,30,2080,41.7C2133.3,53,2187,67,2240,66.7C2293.3,67,2347,53,2400,43.3C2453.3,33,2507,27,2560,25C2613.3,23,2667,27,2720,36.7C2773.3,47,2827,63,2880,61.7C2933.3,60,2987,40,3040,41.7C3093.3,43,3147,67,3200,70C3253.3,73,3307,57,3360,50C3413.3,43,3467,47,3520,53.3C3573.3,60,3627,70,3680,75C3733.3,80,3787,80,3813,80L3840,80L3840,100L3813.3,100C3786.7,100,3733,100,3680,100C3626.7,100,3573,100,3520,100C3466.7,100,3413,100,3360,100C3306.7,100,3253,100,3200,100C3146.7,100,3093,100,3040,100C2986.7,100,2933,100,2880,100C2826.7,100,2773,100,2720,100C2666.7,100,2613,100,2560,100C2506.7,100,2453,100,2400,100C2346.7,100,2293,100,2240,100C2186.7,100,2133,100,2080,100C2026.7,100,1973,100,1920,100C1866.7,100,1813,100,1760,100C1706.7,100,1653,100,1600,100C1546.7,100,1493,100,1440,100C1386.7,100,1333,100,1280,100C1226.7,100,1173,100,1120,100C1066.7,100,1013,100,960,100C906.7,100,853,100,800,100C746.7,100,693,100,640,100C586.7,100,533,100,480,100C426.7,100,373,100,320,100C266.7,100,213,100,160,100C106.7,100,53,100,27,100L0,100Z"/></svg>
+        <h2>Derniers projets</h2>
+        <h3>Les derniers projets réaliser</h3>
+        <div class="content">
+            <div class="project">
+                <h2>Projet</h2>
+                <h3>Explication projet</h3>
+                <img src="images/ordi-portable.png" alt="">
+                <a href="#">Voir le site</a>
+            </div>
+            <div class="project">
+                <h2>Projet</h2>
+                <h3>Explication projet</h3>
+                <img src="images/ordi-portable.png" alt="">
+                <a href="#">Voir le site</a>
+            </div>
+            <div class="project">
+                <h2>Projet</h2>
+                <h3>Explication projet</h3>
+                <img src="images/ordi-portable.png" alt="">
+                <a href="#">Voir le site</a>
+            </div>
+            <div class="project">
+                <h2>Projet</h2>
+                <h3>Explication projet</h3>
+                <img src="images/ordi-portable.png" alt="">
+                <a href="#">Voir le site</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="javascript/home.js"></script>
+{% endblock %}
